@@ -28,12 +28,19 @@ Coin specifications
 In order to incentivize miners to participate in the project,  we join the unofficial alt-crypto launch day of 4/20  with low emission “collector” angle and specifications.
 
 Total supply:     4.2m AARK; 
+
 Emission time:    420 year emission;
+
 Emission rate:    42% mined in first 4.2  years  (i.e., 1,764,000 AARK), flattening thereafter
+
 Codebase:    Bitcoin 
+
 Algo:        sha256
+
 Premine:    0%
+
 Dev fee:    0%
+
 Halving:    halved each year for first 4.2 years, then smoothed.
 
 
