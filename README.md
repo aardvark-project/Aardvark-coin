@@ -1,7 +1,13 @@
 AardvarkCoin Core integration/staging tree
 =====================================
 
-https://aardvark.dev
+Website: https://aardvark.dev
+Pool: http://pool.aark.tech
+Explorer: http://explorer.aark.tech 
+Discord:  https://discord.gg/mHJnneu
+Exchange:    https://OffshoreX.exchange (by 4/22)  
+
+
 
 What is AardvarkCoin?
 ----------------
