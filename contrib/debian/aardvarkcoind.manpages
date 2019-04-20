@@ -1,0 +1,3 @@
+debian/manpages/aardvarkcoind.1
+debian/manpages/aardvarkcoin.conf.5
+debian/manpages/aardvarkcoin-cli.1

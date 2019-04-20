@@ -1,0 +1,6 @@
+usr/local/bin/aardvarkcoin-qt usr/bin
+share/pixmaps/aardvarkcoin32.xpm usr/share/pixmaps
+share/pixmaps/aardvarkcoin16.xpm usr/share/pixmaps
+share/pixmaps/aardvarkcoin128.png usr/share/pixmaps
+debian/aardvarkcoin-qt.desktop usr/share/applications
+debian/aardvarkcoin-qt.protocol usr/share/kde4/services/

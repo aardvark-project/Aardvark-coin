@@ -1,0 +1,22 @@
+[Unit]
+Description=AardvarkCoin's distributed currency daemon
+After=network.target
+
+[Service]
+User=aardvarkcoin
+Group=aardvarkcoin
+
+Type=forking
+PIDFile=/var/lib/aardvarkcoind/aardvarkcoind.pid
+ExecStart=/usr/bin/aardvarkcoind -daemon -pid=/var/lib/aardvarkcoind/aardvarkcoind.pid \
+-conf=/etc/aardvarkcoin/aardvarkcoin.conf -datadir=/var/lib/aardvarkcoind -disablewallet
+
+Restart=always
+PrivateTmp=true
+TimeoutStopSec=60s
+TimeoutStartSec=2s
+StartLimitInterval=120s
+StartLimitBurst=5
+
+[Install]
+WantedBy=multi-user.target

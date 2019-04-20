@@ -1,0 +1,12 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=AardvarkCoin
+Comment=AardvarkCoin P2P Cryptocurrency
+Comment[fr]=AardvarkCoin, monnaie virtuelle cryptographique pair à pair
+Comment[tr]=AardvarkCoin, eşten eşe kriptografik sanal para birimi
+Exec=aardvarkcoin-qt %u
+Terminal=false
+Type=Application
+Icon=aardvarkcoin128
+MimeType=x-scheme-handler/aardvarkcoin;
+Categories=Office;Finance;
