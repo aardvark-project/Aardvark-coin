@@ -40,9 +40,9 @@ QString AardvarkCoinUnits::name(int unit)
 {
     switch(unit)
     {
-    case ARK: return QString("ARK");
-    case mARK: return QString("mARK");
-    case uARK: return QString::fromUtf8("μARK");
+    case ARK: return QString("AARK");
+    case mARK: return QString("mAARK");
+    case uARK: return QString::fromUtf8("μAARK");
     default: return QString("???");
     }
 }
