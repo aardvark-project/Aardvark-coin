@@ -79,7 +79,7 @@ public:
         consensus.powLimit = uint256S("00000fffffffffffffffffffffffffffffffffffffffffffffffffffffffffff");
         consensus.nPowTargetTimespan = 60 * 60; // two weeks
         consensus.nPowTargetSpacing = 315;
-        consensus.fPowAllowMinDifficultyBlocks = !false;
+        consensus.fPowAllowMinDifficultyBlocks = false;
         consensus.fPowNoRetargeting = false;
         consensus.nRuleChangeActivationThreshold = 10; // 95% of 2016
         consensus.nMinerConfirmationWindow = 20; // nPowTargetTimespan / nPowTargetSpacing
@@ -102,7 +102,7 @@ public:
         pchMessageStart[2] = 0xb4;
         pchMessageStart[3] = 0xd9;
         vAlertPubKey = ParseHex("04fc9702847840aaf195de8442ebecedf5b095cdbb9bc716bda9110971b28a49e0ead8564ff0db22209e0374782c093bb899692d524e9d6a6956e7c5ecbcd68284");
-        nDefaultPort = 36338;
+        nDefaultPort = 35666;
         nMaxTipAge = 24 * 60 * 60;
         nPruneAfterHeight = 100000;
 

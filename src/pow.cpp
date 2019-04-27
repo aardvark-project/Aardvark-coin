@@ -22,7 +22,7 @@ unsigned int GetNextWorkRequired(const CBlockIndex* pindexLast, const CBlockHead
     // Only change once per difficulty adjustment interval
     if ((pindexLast->nHeight+1) % params.DifficultyAdjustmentInterval() != 0)
     {
-        if (params.fPowAllowMinDifficultyBlocks)
+        if (pindexLast->nHeight+1 <= 10000 || params.fPowAllowMinDifficultyBlocks)
         {
             // Special difficulty rule for testnet:
             // If the new block's timestamp is more than 2* 10 minutes

@@ -1,57 +1,82 @@
 AardvarkCoin Core integration/staging tree
 =====================================
 
-Website: https://aardvark.dev
+[![Build Status](https://travis-ci.org/bitcoin/bitcoin.svg?branch=master)](https://travis-ci.org/bitcoin/bitcoin)
 
-Pool: http://pool.aark.tech
-
-Explorer: http://explorer.aark.tech 
-
-Discord:  https://discord.gg/mHJnneu
-
-Exchange:    https://OffshoreX.exchange  by 4/22
-
-
+https://bitcoincore.org
 
 What is AardvarkCoin?
 ----------------
 
-Aardvark is launching as real crypto but it’s also a gamified research project—kind of a virtual fire drill—to see how an average joe altcoin fork might go about securing itself with quantum-resistant technology.  Our project forks Bitcoin code to launch a new zero-premine community project with a quick sprint from Bitcoin’s code and signature system to quantum-resistant solution, if one is available today. We intend to document the process and track it as a research contribution. At a very small scale and in limited scope, the project will show the steps needed to outfit Bitcoin with a quantum-resistant shell.
+AardvarkCoin is an experimental new digital currency that enables instant payments to
+anyone, anywhere in the world. AardvarkCoin uses peer-to-peer technology to operate
+with no central authority: managing transactions and issuing money are carried
+out collectively by the network. AardvarkCoin Core is the name of open source
+software which enables the use of this currency.
 
+For more information, as well as an immediately useable, binary version of
+the AardvarkCoin Core software, see https://bitcoin.org/en/download, or read the
+[original whitepaper](https://bitcoincore.org/bitcoin.pdf).
 
-A simulated drill with real crypto
-----------------
-Our hypothesis is that at some point in the next 2 to 20 years quantum computers will crack the elliptic curve signature scheme of Bitcoin—and many other currencies that use a public/private key system. The question isn’t if quantum computing is capable of cracking Bitcoin’s signatures, it’s when.  While there won’t be a single, perfect solution for all projects when this occurs, but one thing is for certain: projects will need to adapt.  
+License
+-------
 
-We’re taking a research-based approach to this, looking at this as a game. Consider the following players:
+AardvarkCoin Core is released under the terms of the MIT license. See [COPYING](COPYING) for more
+information or see https://opensource.org/licenses/MIT.
 
-(i) Offense. The Offense in a quantum attack is an unknown mix of well-funded private and state actors that  will develop quantum resistant technology and use it periodically in different ways to attack and weaken financial systems.  The equivalent of the X-Prize for the Offense is a mix: direct financial gain (stealing crypto from cracked wallets) or governmental or private-sector disruption.
+Development Process
+-------------------
 
+The `master` branch is regularly built and tested, but is not guaranteed to be
+completely stable. [Tags](https://github.com/bitcoin/bitcoin/tags) are created
+regularly to indicate new official, stable release versions of AardvarkCoin Core.
 
-(ii) Defense. Um, hello?  Is there even a coordinated Defense?  Bueller?  Bueller?  Defense is largely waiting for the NIST contest to finish otherwise no real plan (NIST is great but it’s basically waiting on government to run a contest).  There is not, yet, a clear path for most crypto projects to defend themselves.  
+The contribution workflow is described in [CONTRIBUTING.md](CONTRIBUTING.md).
 
-(iii) Independent Actors. The innovation in quantum resistance has come entirely  just a few open-source (but independent) projects. The ability of this code to be adapted to Bitcoin and other codebases exists but hasn’t been attempted yet as far as we know. We will explore the willingness of these projects to share technology and practicers. 
+The developer [mailing list](https://lists.linuxfoundation.org/mailman/listinfo/bitcoin-dev)
+should be used to discuss complicated or controversial changes before working
+on a patch set.
 
+Developer IRC can be found on Freenode at #aardvarkcoin-core-dev.
 
-Coin specifications
-----------------
-In order to incentivize miners to participate in the project,  we join the unofficial alt-crypto launch day of 4/20  with low emission “collector” angle and specifications.
+Testing
+-------
 
-Total supply:     4.2m AARK; 
+Testing and code review is the bottleneck for development; we get more pull
+requests than we can review and test on short notice. Please be patient and help out by testing
+other people's pull requests, and remember this is a security-critical project where any mistake might cost people
+lots of money.
 
-Emission time:    420 year emission;
+### Automated Testing
 
-Emission rate:    42% mined in first 4.2  years  (i.e., 1,764,000 AARK), flattening thereafter
+Developers are strongly encouraged to write [unit tests](/doc/unit-tests.md) for new code, and to
+submit new unit tests for old code. Unit tests can be compiled and run
+(assuming they weren't disabled in configure) with: `make check`
 
-Codebase:    Bitcoin 
+There are also [regression and integration tests](/qa) of the RPC interface, written
+in Python, that are run automatically on the build server.
+These tests can be run (if the [test dependencies](/qa) are installed) with: `qa/pull-tester/rpc-tests.py`
 
-Algo:        sha256
+The Travis CI system makes sure that every pull request is built for Windows
+and Linux, OS X, and that unit and sanity tests are automatically run.
 
-Premine:    0%
+### Manual Quality Assurance (QA) Testing
 
-Dev fee:    0%
+Changes should be tested by somebody other than the developer who wrote the
+code. This is especially important for large or high-risk changes. It is useful
+to add a test plan to the pull request description if testing the changes is
+not straightforward.
 
-Halving:    halved each year for first 4.2 years, then smoothed.
+Translations
+------------
 
+Changes to translations as well as new translations can be submitted to
+[AardvarkCoin Core's Transifex page](https://www.transifex.com/projects/p/bitcoin/).
 
+Translations are periodically pulled from Transifex and merged into the git repository. See the
+[translation process](doc/translation_process.md) for details on how this works.
 
+**Important**: We do not accept translation changes as GitHub pull requests because the next
+pull from Transifex would automatically overwrite them again.
+
+Translators should also subscribe to the [mailing list](https://groups.google.com/forum/#!forum/bitcoin-translators).
