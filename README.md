@@ -1,5 +1,5 @@
 
-Website: https://aardvark.dev
+Website: https://aark.dev
 
 Pool: http://pool.aark.tech
 
